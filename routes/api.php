@@ -7,6 +7,7 @@ use App\Http\Controllers\Api\UserController;
 use App\Http\Controllers\Api\UKMController;
 use App\Http\Controllers\Api\GalleryApiController;
 use App\Http\Controllers\Api\CommentApiController;
+use App\Http\Controllers\Api\UkmProfileApiController;
 
 /*
 |--------------------------------------------------------------------------
@@ -38,7 +39,7 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::apiResource('galleries', GalleryApiController::class);
 
     // // UKM API
-    // Route::apiResource('ukms', UKMController::class);
+    Route::apiResource('ukm_profiles', UkmProfileApiController::class)->only(['index', 'show']);
 
     // Comment API
     Route::apiResource('comment', CommentApiController::class);
