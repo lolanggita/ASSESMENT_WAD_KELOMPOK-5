@@ -13,6 +13,9 @@ return new class extends Migration
     {
         Schema::create('ukm_profiles', function (Blueprint $table) {
             $table->id();
+            $table->text('deskripsi');
+            $table->string('logo')->nullable();
+            $table->string('kontak');
             $table->timestamps();
         });
     }

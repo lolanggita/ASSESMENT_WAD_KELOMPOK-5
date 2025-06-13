@@ -9,4 +9,11 @@ class UkmProfile extends Model
 {
     /** @use HasFactory<\Database\Factories\UkmProfileFactory> */
     use HasFactory;
+
+    protected $fillable = [
+        'nama',
+        'deskripsi',
+        'logo',
+        'kontak',
+    ];
 }
