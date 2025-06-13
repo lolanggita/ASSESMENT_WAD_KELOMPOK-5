@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\Api\UserController;
 use App\Http\Controllers\Api\UKMController;
-use App\Http\Controllers\Api\GalleryController;
+use App\Http\Controllers\Api\GalleryApiController;
 use App\Http\Controllers\Api\CommentApiController;
 
 /*
@@ -35,7 +35,7 @@ Route::middleware('auth:sanctum')->group(function () {
     // Route::apiResource('users', UserController::class)->only(['index', 'show']);
 
     // // Gallery API
-    // Route::apiResource('galleries', GalleryController::class);
+    Route::apiResource('galleries', GalleryApiController::class);
 
     // // UKM API
     // Route::apiResource('ukms', UKMController::class);
@@ -50,4 +50,5 @@ Route::middleware('auth:sanctum')->group(function () {
             'user' => $request->user()
         ]);
     });
+
 });
